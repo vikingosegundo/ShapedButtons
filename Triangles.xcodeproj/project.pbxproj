@@ -13,6 +13,7 @@
 		640DCC291E40D03400454142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 640DCC281E40D03400454142 /* Assets.xcassets */; };
 		640DCC2C1E40D03400454142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 640DCC2A1E40D03400454142 /* LaunchScreen.storyboard */; };
 		640DCC341E40D05000454142 /* ShapedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640DCC331E40D05000454142 /* ShapedButton.swift */; };
+		640DCC361E413C4200454142 /* UIButton+Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640DCC351E413C4200454142 /* UIButton+Shape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		640DCC2B1E40D03400454142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		640DCC2D1E40D03400454142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		640DCC331E40D05000454142 /* ShapedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapedButton.swift; sourceTree = "<group>"; };
+		640DCC351E413C4200454142 /* UIButton+Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Shape.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				640DCC2A1E40D03400454142 /* LaunchScreen.storyboard */,
 				640DCC2D1E40D03400454142 /* Info.plist */,
 				640DCC331E40D05000454142 /* ShapedButton.swift */,
+				640DCC351E413C4200454142 /* UIButton+Shape.swift */,
 			);
 			path = Triangles;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				640DCC241E40D03400454142 /* ViewController.swift in Sources */,
+				640DCC361E413C4200454142 /* UIButton+Shape.swift in Sources */,
 				640DCC341E40D05000454142 /* ShapedButton.swift in Sources */,
 				640DCC221E40D03400454142 /* AppDelegate.swift in Sources */,
 			);

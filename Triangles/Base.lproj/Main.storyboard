@@ -61,9 +61,20 @@
                                     <constraint firstAttribute="width" constant="225" id="cnr-nc-iXT"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gf5-Ba-ZsB">
+                                <rect key="frame" x="153" y="465" width="68" height="68"/>
+                                <color key="backgroundColor" red="0.40989950747683868" green="0.94209439766839376" blue="0.74001639906784122" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="2ua-F1-G0s"/>
+                                    <constraint firstAttribute="height" constant="68" id="uCf-OS-PZe"/>
+                                </constraints>
+                                <state key="normal" title="ok"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="gf5-Ba-ZsB" firstAttribute="top" secondItem="k9n-lB-bWW" secondAttribute="bottom" constant="19" id="0mH-R5-T1w"/>
+                            <constraint firstItem="gf5-Ba-ZsB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RMT-MN-aO0"/>
                             <constraint firstItem="k9n-lB-bWW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eex-Av-ZMc"/>
                             <constraint firstItem="k9n-lB-bWW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p9T-ov-qDd"/>
                         </constraints>
@@ -72,6 +83,7 @@
                         <outlet property="bottomButton" destination="OOZ-i4-pdY" id="YQd-6E-4ns"/>
                         <outlet property="circleButton" destination="MIU-X6-eb7" id="ljz-rB-bLv"/>
                         <outlet property="leftButton" destination="0kh-tx-LMk" id="gZG-hH-SsR"/>
+                        <outlet property="okButton" destination="gf5-Ba-ZsB" id="5jR-eb-Lhl"/>
                         <outlet property="rightButton" destination="bUs-Zx-7HI" id="Ryi-E8-D3M"/>
                         <outlet property="topButton" destination="yb6-D1-A3A" id="igb-cI-uLc"/>
                     </connections>

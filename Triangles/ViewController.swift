@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var leftButton: ShapedButton!
     
     @IBOutlet weak var circleButton: ShapedButton!
+    @IBOutlet weak var okButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         for (idx, button) in ([topButton, rightButton, bottomButton, leftButton].flatMap{ $0 }).enumerated() {
@@ -28,5 +29,7 @@ class ViewController: UIViewController {
         
         circleButton.configure(as: .circle)
         view.sendSubview(toBack: circleButton)
+        
+        okButton.configure(as: .triangle(.up))
     }
 }
