@@ -29,7 +29,6 @@ class ShapedButton: UIButton {
         }
     }
     
-
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         return  shape.cgPath.contains(point)
     }
@@ -38,24 +37,17 @@ class ShapedButton: UIButton {
         switch shape {
         case .circle:
             configureCircle()
-        case .triangle(let triangelFacing):
-            configureTriangle(facing: triangelFacing)
-        }
-    }
     
-    private func configureTriangle(facing: TriangleFacing) {
-        switch facing {
-        case .up:
+        case .triangle(.up):
             configureUpFacingTriangle()
-        case .left:
-            configureLeftFacingTriangle()
-        case .down:
-            configureDownFacingTriangle()
-        case .right:
+        case .triangle(.right):
             configureRightFacingTriangle()
+        case .triangle(.down):
+            configureDownFacingTriangle()
+        case .triangle(.left):
+            configureLeftFacingTriangle()
         }
     }
-    
     
     private func configureUpFacingTriangle() {
         let triangleBezier = UIBezierPath()
