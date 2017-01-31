@@ -21,31 +21,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOZ-i4-pdY" customClass="ShapedButton" customModule="Triangles" customModuleProvider="target">
-                                <rect key="frame" x="161" y="298" width="75" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34901960780000002" green="0.76078431369999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUs-Zx-7HI" customClass="ShapedButton" customModule="Triangles" customModuleProvider="target">
-                                <rect key="frame" x="124" y="298" width="75" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.54117647059999996" green="0.82352941180000006" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yb6-D1-A3A" customClass="ShapedButton" customModule="Triangles" customModuleProvider="target">
-                                <rect key="frame" x="87" y="298" width="75" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.47467072570000002" green="1" blue="0.93112493510000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9n-lB-bWW">
+                                <rect key="frame" x="75" y="221" width="225" height="225"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIU-X6-eb7" customClass="ShapedButton" customModule="Triangles" customModuleProvider="target">
+                                        <rect key="frame" x="49" y="50" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.8844866071428571" green="0.67463727678571428" blue="0.43286830357142858" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Center"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUs-Zx-7HI" customClass="ShapedButton" customModule="Triangles" customModuleProvider="target">
+                                        <rect key="frame" x="150" y="75" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.54117647059999996" green="0.82352941180000006" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="East"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yb6-D1-A3A" customClass="ShapedButton" customModule="Triangles" customModuleProvider="target">
+                                        <rect key="frame" x="74" y="0.0" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.47467072570000002" green="1" blue="0.93112493510000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="North"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOZ-i4-pdY" customClass="ShapedButton" customModule="Triangles" customModuleProvider="target">
+                                        <rect key="frame" x="74" y="150" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.58392857142857146" green="0.76078431369999999" blue="0.78116629464285714" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="South"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kh-tx-LMk" customClass="ShapedButton" customModule="Triangles" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="75" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.34901960780000002" green="0.76078431369999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="West"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="cbm-hC-DRP"/>
+                                    <constraint firstAttribute="width" constant="225" id="cnr-nc-iXT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k9n-lB-bWW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eex-Av-ZMc"/>
+                            <constraint firstItem="k9n-lB-bWW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p9T-ov-qDd"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="button" destination="bUs-Zx-7HI" id="KwS-u0-how"/>
-                        <outlet property="leftButton" destination="yb6-D1-A3A" id="xdS-uh-k20"/>
-                        <outlet property="rightButton" destination="OOZ-i4-pdY" id="P2P-TL-nm5"/>
+                        <outlet property="bottomButton" destination="OOZ-i4-pdY" id="YQd-6E-4ns"/>
+                        <outlet property="circleButton" destination="MIU-X6-eb7" id="ljz-rB-bLv"/>
+                        <outlet property="leftButton" destination="0kh-tx-LMk" id="gZG-hH-SsR"/>
+                        <outlet property="rightButton" destination="bUs-Zx-7HI" id="Ryi-E8-D3M"/>
+                        <outlet property="topButton" destination="yb6-D1-A3A" id="igb-cI-uLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

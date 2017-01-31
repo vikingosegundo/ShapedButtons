@@ -9,21 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var leftButton: ShapedButton!
-    @IBOutlet weak var button: ShapedButton!
+    
+    @IBOutlet weak var topButton: ShapedButton!
     @IBOutlet weak var rightButton: ShapedButton!
+    @IBOutlet weak var bottomButton: ShapedButton!
+    @IBOutlet weak var leftButton: ShapedButton!
+    
+    @IBOutlet weak var circleButton: ShapedButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for (idx, b) in [leftButton, button, rightButton].enumerated() {
-            if let b = b {
-                if idx % 2 == 0 {
-                    b.configureDownFacingTriangle()
-                } else {
-                    b.configureUpFacingTriangle()
-                }
+        for (idx, button) in ([topButton, rightButton, bottomButton, leftButton].flatMap{ $0 }).enumerated() {
+            
+            let faceInt = UInt(idx % 4)
+            if let facing = TriangleFacing(rawValue: faceInt) {
+                button.configure(as: .triangle(facing))
             }
         }
+        
+        circleButton.configure(as: .circle)
+        view.sendSubview(toBack: circleButton)
     }
 }

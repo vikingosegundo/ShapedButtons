@@ -29,6 +29,12 @@ override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
 
 ```
 
+A more complex form using four triangles and a circle, all buttons:
+
+![compassrose][compassrose]
+
+
 [0]: http://stackoverflow.com/questions/41955044/uibutton-shape-according-to-image-frame/41960398#41960398
 [triangles]: ./images/triangles.png
 [storyboard]: ./images/triangles_storyboard.png
+[compassrose]: ./images/compass_rose.png
