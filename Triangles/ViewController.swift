@@ -10,16 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var leftButton: ShapedButton!
+    @IBOutlet weak var button: ShapedButton!
+    @IBOutlet weak var rightButton: ShapedButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        for (idx, b) in [leftButton, button, rightButton].enumerated() {
+            if let b = b {
+                if idx % 2 == 0 {
+                    b.configureDownFacingTriangle()
+                } else {
+                    b.configureUpFacingTriangle()
+                }
+            }
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-
