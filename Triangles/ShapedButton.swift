@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShapedButton: UIButton {
+class PathShapedButton: UIButton {
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         return  shape.cgPath.contains(point)
     }

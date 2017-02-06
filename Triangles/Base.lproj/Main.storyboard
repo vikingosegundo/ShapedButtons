@@ -24,31 +24,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9n-lB-bWW">
                                 <rect key="frame" x="75" y="221" width="225" height="225"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIU-X6-eb7" customClass="ShapedButton" customModule="Triangles" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIU-X6-eb7" customClass="PathShapedButton" customModule="Triangles" customModuleProvider="target">
                                         <rect key="frame" x="49" y="50" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.8844866071428571" green="0.67463727678571428" blue="0.43286830357142858" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Center"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUs-Zx-7HI" customClass="ShapedButton" customModule="Triangles" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUs-Zx-7HI" customClass="PathShapedButton" customModule="Triangles" customModuleProvider="target">
                                         <rect key="frame" x="150" y="75" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.54117647059999996" green="0.82352941180000006" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="East"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yb6-D1-A3A" customClass="ShapedButton" customModule="Triangles" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yb6-D1-A3A" customClass="PathShapedButton" customModule="Triangles" customModuleProvider="target">
                                         <rect key="frame" x="74" y="0.0" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.47467072570000002" green="1" blue="0.93112493510000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="North"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOZ-i4-pdY" customClass="ShapedButton" customModule="Triangles" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOZ-i4-pdY" customClass="PathShapedButton" customModule="Triangles" customModuleProvider="target">
                                         <rect key="frame" x="74" y="150" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.58392857142857146" green="0.76078431369999999" blue="0.78116629464285714" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="South"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kh-tx-LMk" customClass="ShapedButton" customModule="Triangles" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kh-tx-LMk" customClass="PathShapedButton" customModule="Triangles" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="75" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.34901960780000002" green="0.76078431369999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
@@ -70,6 +70,17 @@
                                 </constraints>
                                 <state key="normal" title="ok"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdD-vB-VEM" customClass="ImageShapedButton" customModule="Triangles" customModuleProvider="target">
+                                <rect key="frame" x="146" y="89" width="117" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" backgroundImage="black"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJ8-Hp-JDA" customClass="PathShapedButton" customModule="Triangles" customModuleProvider="target">
+                                <rect key="frame" x="75" y="570" width="80" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.54117647059999996" green="0.82352941180000006" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -84,6 +95,7 @@
                         <outlet property="circleButton" destination="MIU-X6-eb7" id="ljz-rB-bLv"/>
                         <outlet property="leftButton" destination="0kh-tx-LMk" id="gZG-hH-SsR"/>
                         <outlet property="okButton" destination="gf5-Ba-ZsB" id="5jR-eb-Lhl"/>
+                        <outlet property="polygonButton" destination="vJ8-Hp-JDA" id="iSV-H8-6fU"/>
                         <outlet property="rightButton" destination="bUs-Zx-7HI" id="Ryi-E8-D3M"/>
                         <outlet property="topButton" destination="yb6-D1-A3A" id="igb-cI-uLc"/>
                     </connections>
@@ -93,4 +105,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="black" width="200" height="200"/>
+    </resources>
 </document>

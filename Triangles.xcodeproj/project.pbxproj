@@ -14,6 +14,10 @@
 		640DCC2C1E40D03400454142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 640DCC2A1E40D03400454142 /* LaunchScreen.storyboard */; };
 		640DCC341E40D05000454142 /* ShapedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640DCC331E40D05000454142 /* ShapedButton.swift */; };
 		640DCC361E413C4200454142 /* UIButton+Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640DCC351E413C4200454142 /* UIButton+Shape.swift */; };
+		640DCC381E413FEF00454142 /* FullWidthImageContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640DCC371E413FEF00454142 /* FullWidthImageContentView.xib */; };
+		640DCC3A1E41401600454142 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640DCC391E41401600454142 /* EnumCollection.swift */; };
+		640DCC3C1E414B9600454142 /* UIImage+Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640DCC3B1E414B9600454142 /* UIImage+Pixel.swift */; };
+		640DCC3E1E4150F300454142 /* ImageShapedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640DCC3D1E4150F300454142 /* ImageShapedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		640DCC2D1E40D03400454142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		640DCC331E40D05000454142 /* ShapedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapedButton.swift; sourceTree = "<group>"; };
 		640DCC351E413C4200454142 /* UIButton+Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Shape.swift"; sourceTree = "<group>"; };
+		640DCC371E413FEF00454142 /* FullWidthImageContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullWidthImageContentView.xib; sourceTree = "<group>"; };
+		640DCC391E41401600454142 /* EnumCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
+		640DCC3B1E414B9600454142 /* UIImage+Pixel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Pixel.swift"; sourceTree = "<group>"; };
+		640DCC3D1E4150F300454142 /* ImageShapedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageShapedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,8 @@
 		640DCC201E40D03400454142 /* Triangles */ = {
 			isa = PBXGroup;
 			children = (
+				640DCC391E41401600454142 /* EnumCollection.swift */,
+				640DCC371E413FEF00454142 /* FullWidthImageContentView.xib */,
 				640DCC211E40D03400454142 /* AppDelegate.swift */,
 				640DCC231E40D03400454142 /* ViewController.swift */,
 				640DCC251E40D03400454142 /* Main.storyboard */,
@@ -66,6 +76,8 @@
 				640DCC2D1E40D03400454142 /* Info.plist */,
 				640DCC331E40D05000454142 /* ShapedButton.swift */,
 				640DCC351E413C4200454142 /* UIButton+Shape.swift */,
+				640DCC3B1E414B9600454142 /* UIImage+Pixel.swift */,
+				640DCC3D1E4150F300454142 /* ImageShapedButton.swift */,
 			);
 			path = Triangles;
 			sourceTree = "<group>";
@@ -102,6 +114,7 @@
 				TargetAttributes = {
 					640DCC1D1E40D03400454142 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = YWS6MYD824;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +144,7 @@
 			files = (
 				640DCC2C1E40D03400454142 /* LaunchScreen.storyboard in Resources */,
 				640DCC291E40D03400454142 /* Assets.xcassets in Resources */,
+				640DCC381E413FEF00454142 /* FullWidthImageContentView.xib in Resources */,
 				640DCC271E40D03400454142 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,9 +156,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				640DCC3E1E4150F300454142 /* ImageShapedButton.swift in Sources */,
+				640DCC3C1E414B9600454142 /* UIImage+Pixel.swift in Sources */,
 				640DCC241E40D03400454142 /* ViewController.swift in Sources */,
 				640DCC361E413C4200454142 /* UIButton+Shape.swift in Sources */,
 				640DCC341E40D05000454142 /* ShapedButton.swift in Sources */,
+				640DCC3A1E41401600454142 /* EnumCollection.swift in Sources */,
 				640DCC221E40D03400454142 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YWS6MYD824;
 				INFOPLIST_FILE = Triangles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vs.Triangles;
@@ -280,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YWS6MYD824;
 				INFOPLIST_FILE = Triangles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vs.Triangles;

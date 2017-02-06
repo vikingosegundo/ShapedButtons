@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum TriangleFacing: UInt {
+enum TriangleFacing: UInt, EnumCollection {
     case up
     case right
     case down
@@ -17,6 +17,7 @@ enum TriangleFacing: UInt {
 
 enum ButtonShape {
     case triangle(TriangleFacing)
+    case polygon([CGPoint])
     case circle
 }
 
@@ -29,7 +30,8 @@ extension UIButton {
             self.layer.mask = l
         }
         get {
-            if let l = self.layer.mask as? CAShapeLayer, let p = l.path {
+            if let l = self.layer.mask as? CAShapeLayer,
+               let p = l.path {
                 return UIBezierPath(cgPath: p)
             }
             return UIBezierPath()
@@ -49,63 +51,84 @@ extension UIButton {
             configureDownFacingTriangle()
         case .triangle(.left):
             configureLeftFacingTriangle()
+            
+        case .polygon(let points):
+            configurePolygon(normalizedPoints: points)
         }
     }
+}
+
+fileprivate
+extension UIButton {
     
-    private func configureUpFacingTriangle() {
-        let triangleBezier = UIBezierPath()
-        triangleBezier.move(to: CGPoint(x: self.frame.size.width / 2, y:0))
-        triangleBezier.addLine(to: CGPoint(x: 0, y: self.frame.size.height))
-        triangleBezier.addLine(to: CGPoint(x: self.frame.size.width, y: self.frame.size.height))
-        triangleBezier.close()
-        self.shape = triangleBezier
+    func denormalize(point:CGPoint) -> CGPoint {
+        return CGPoint(x: point.x * self.bounds.size.width, y: point.y * self.bounds.size.height)
+    }
+    
+    func configurePolygon(normalizedPoints points: [CGPoint]) {
+        var points = points
+        guard
+            points.count > 2
+            else {
+            fatalError("a polygon needs more than 2 points")
+        }
         
+        let polygonBezier = UIBezierPath()
+        polygonBezier.move(to: denormalize(point: points.removeFirst()))
+        for point in points {
+            polygonBezier.addLine(to: denormalize(point: point))
+        }
+        polygonBezier.close()
+        self.shape = polygonBezier
+    }
+    
+    func configureUpFacingTriangle() {
+        configurePolygon(normalizedPoints: [
+            CGPoint(x: 0.5, y: 0.0),
+            CGPoint(x: 0.0, y: 1.0),
+            CGPoint(x: 1.0, y: 1.0)
+        ])
         let pointSize = self.titleLabel?.font.pointSize ?? 0
         self.titleEdgeInsets.top = self.titleEdgeInsets.top + (self.frame.size.height - pointSize - 7)
     }
     
-    private func configureLeftFacingTriangle() {
-        let triangleBezier = UIBezierPath()
-        triangleBezier.move(to: CGPoint(x: 0, y:self.frame.size.height / 2))
-        triangleBezier.addLine(to: CGPoint(x: self.frame.size.width, y: 0))
-        triangleBezier.addLine(to: CGPoint(x: self.frame.size.width, y: self.frame.size.height))
-        triangleBezier.close()
-        self.shape = triangleBezier
-        
+    func configureLeftFacingTriangle() {
+        configurePolygon(normalizedPoints: [
+            CGPoint(x: 0.0, y: 0.5),
+            CGPoint(x: 1.0, y: 0.0),
+            CGPoint(x: 1.0, y: 1.0)
+        ])
         self.titleEdgeInsets.right = -21
     }
     
     
-    private func configureDownFacingTriangle() {
-        let triangleBezier = UIBezierPath()
-        triangleBezier.move(to: CGPoint.zero)
-        triangleBezier.addLine(to: CGPoint(x: self.frame.size.width, y: 0))
-        triangleBezier.addLine(to: CGPoint(x:self.frame.size.width/2, y: self.frame.size.height ))
-        triangleBezier.close()
-        self.shape = triangleBezier
-        
+    func configureDownFacingTriangle() {
+        configurePolygon(normalizedPoints: [
+            CGPoint.zero,
+            CGPoint(x: 1.0, y: 0.0),
+            CGPoint(x: 0.5, y: 1.0)
+        ])
         let pointSize = self.titleLabel?.font.pointSize ?? 0
         self.titleEdgeInsets.top = self.titleEdgeInsets.bottom - (self.frame.size.height - pointSize - 7)
     }
     
-    private func configureRightFacingTriangle() {
-        let triangleBezier = UIBezierPath()
-        triangleBezier.move(to: CGPoint.zero)
-        triangleBezier.addLine(to: CGPoint(x: self.frame.size.width, y: self.frame.size.height / 2))
-        triangleBezier.addLine(to: CGPoint(x: 0, y: self.frame.size.height ))
-        triangleBezier.close()
-        self.shape = triangleBezier
+    func configureRightFacingTriangle() {
+        configurePolygon(normalizedPoints: [
+            CGPoint.zero,
+            CGPoint(x: 1.0, y: 0.5),
+            CGPoint(x: 0.0, y: 1.0)
+        ])
         self.titleEdgeInsets.left = -21
     }
     
     
-    private func configureCircle() {
+    func configureCircle() {
         let radius =  min(self.bounds.width, self.bounds.height) / 2
         let circleCenter = CGPoint(x: self.bounds.width / 2, y: self.bounds.height / 2)
         let circleBezier = UIBezierPath(arcCenter: circleCenter,
-                                        radius: radius,
-                                        startAngle: CGFloat(0),
-                                        endAngle: CGFloat(2 * M_PI),
+                                           radius: radius,
+                                       startAngle: CGFloat(0),
+                                         endAngle: CGFloat(2 * M_PI),
                                         clockwise: true)
         self.shape = circleBezier
     }
